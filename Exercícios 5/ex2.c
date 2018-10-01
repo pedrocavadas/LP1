@@ -1,29 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int compra(int* conta, int valor){
-	int saldo;
-	saldo=(*conta-valor);
-	return saldo;
+void compra(int* conta, int valor){
+	*conta=*conta-valor;
 }
 
 int main(){
-	int c1, c2, valor;
+	int minha_conta1, minha_conta2, valor;
 	int* conta;
 	printf ("Digite o saldo da primeira conta: ");
-	scanf ("%d", &c1);
+	scanf ("%d", &minha_conta1);
 	printf ("Digite o saldo da segunda conta: ");
-	scanf ("%d", &c2);
+	scanf ("%d", &minha_conta2);
 	printf ("Digite o valor do produto: ");
 	scanf ("%d", &valor);
-	if (c1>c2){
-		conta=&c1;
-		int saldo=compra(conta,valor);
-		printf ("Saldo das contas:\nConta 1=%d\nConta 2=%d", saldo,c2);
+	if (minha_conta1>minha_conta2){
+		conta=&minha_conta1;
+		compra(conta,valor);
+		printf ("Saldo das contas:\nConta 1=%d\nConta 2=%d\n", minha_conta1,minha_conta2);
 	}
 	else{
-		conta=&c2;
-		int saldo=compra(conta,valor);
-		printf ("Saldo das contas:\nConta 1=%d\nConta 2=%d", c1,saldo);
+		conta=&minha_conta2;
+		compra(conta,valor);
+		printf ("Saldo das contas:\nConta 1=%d\nConta 2=%d\n", minha_conta1,minha_conta2);
 	}
 }
