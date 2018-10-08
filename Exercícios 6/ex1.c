@@ -15,12 +15,11 @@ float media(int* vet, int n){
         som+=*(vet+i);
     }
     med=(som/n);
-    printf ("A media entre os valores do vetor e: %d\n", med);
 }
 int main(){
     int vet[100],n;
     printf ("Digite o numero N: ");
     scanf ("%d", &n);
     preenche(vet, n);
-    float x=media(vet, n);
+    printf ("A media entre os valores do vetor e: %.2f\n", media(vet,n));
 }
