@@ -1,15 +1,19 @@
 #include <stdio.h>
 
-int main(void){
-	int n1, n2;
+int main(){
+	int n1, n2, i;
 	printf ("Digite o primeiro numero: ");
 	scanf ("%d", &n1);
 	printf ("Digite o segundo numero: ");
 	scanf ("%d", &n2);
-	int i=n1;
-	while (i<=n2){
-		printf ("%d\n", i);
-		i+=1;
+	if (n1<n2){
+	    for (i=n1;i<=n2;i++){
+	    	printf("%d\n", i);
+		}
 	}
-	return 0;
+    else{
+    	for (i=n2;i<=n1;i++){
+    		printf("%d\n", i);
+		}
+	}
 }
