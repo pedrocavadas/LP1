@@ -10,16 +10,19 @@ void preenche(int* vet, int n){
     printf ("Vetor preenchido com sucesso!\n");
 }
 float media(int* vet, int n){
-    int i, med, som=0;
+    int i, som=0;
+    float med;
     for (i=0;i<n;i++){
         som+=*(vet+i);
     }
     med=(som/n);
+    return med;
 }
 int main(){
     int vet[100],n;
     printf ("Digite o numero N: ");
     scanf ("%d", &n);
     preenche(vet, n);
-    printf ("A media entre os valores do vetor e: %.2f\n", media(vet,n));
+	float med=media(vet,n);
+	printf ("A media entre os valores do vetor e: %.2f\n", med);
 }
