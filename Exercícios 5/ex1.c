@@ -15,12 +15,12 @@ int main(){
     printf ("A=%d B=%d\n", a,b);
     if (a>b){
         p=&a;
-	    pont(p);
-	    printf ("NOVO VALOR\nA=%d B=%d\n", *p,b);
+	pont(p);
+        printf ("NOVO VALOR\nA=%d B=%d\n", *p,b);
     }
     else{
         p=&b;
-	    pont(p);
-	    printf ("NOVO VALOR\nA=%d B=%d\n", a,*p);
+	pont(p);
+	printf ("NOVO VALOR\nA=%d B=%d\n", a,*p);
     }
 }
