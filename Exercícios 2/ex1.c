@@ -11,9 +11,9 @@ int main(){
 	    	printf("%d\n", i);
 		}
 	}
-    else{
-    	for (i=n2;i<=n1;i++){
-    		printf("%d\n", i);
-		}
+        else{
+    	    for (i=n2;i<=n1;i++){
+    	        printf("%d\n", i);
+	    }
 	}
 }
