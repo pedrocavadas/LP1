@@ -14,16 +14,13 @@ int main(){
     for (i=0;i<5;i++){
         if (minha_conta1>minha_conta2){
             conta=&minha_conta1;
-            valor=compras[i];
-            compra(conta,valor);
-            printf ("SALDO ATUALIZADO\nSaldo da conta 1: R$%d,00\nSaldo da conta 2: R$%d,00\n", minha_conta1,minha_conta2);
         }
         else{
             conta=&minha_conta2;
-            valor=compras[i];
-            compra(conta,valor);
-            printf ("SALDO ATUALIZADO\nSaldo da conta 1: R$%d,00\nSaldo da conta 2: R$%d,00\n", minha_conta1,minha_conta2);
         }
+        valor=compras[i];
+        compra(conta,valor);
+        printf ("SALDO ATUALIZADO\nSaldo da conta 1: R$%d,00\nSaldo da conta 2: R$%d,00\n", minha_conta1,minha_conta2);
     }
 }
 
