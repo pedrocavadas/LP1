@@ -15,13 +15,11 @@ int main(){
 	printf ("Digite o valor do produto: ");
 	scanf ("%d", &valor);
 	if (minha_conta1>minha_conta2){
-		conta=&minha_conta1;
-		compra(conta,valor);
-		printf ("Saldo das contas:\nConta 1=%d\nConta 2=%d\n", minha_conta1,minha_conta2);
+	    conta=&minha_conta1;
 	}
 	else{
-		conta=&minha_conta2;
-		compra(conta,valor);
-		printf ("Saldo das contas:\nConta 1=%d\nConta 2=%d\n", minha_conta1,minha_conta2);
+	    conta=&minha_conta2;
 	}
+	compra(conta,valor);
+	printf ("SALDO ATUALIZADO:\nConta 1=%d\nConta 2=%d\n", minha_conta1,minha_conta2);
 }
