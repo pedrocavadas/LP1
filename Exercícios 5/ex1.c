@@ -11,11 +11,11 @@ int main(){
     printf ("A=%d B=%d\n", a,b);
     if (a>b){
         p=&a;
-		*p=a-50;
+	*p=a-50;
     }
     else{
         p=&b;
-		*p=b-50;
+	*p=b-50;
     }
     printf("NOVO VALOR:\nA=%d B=%d\n", a,b);
 }
