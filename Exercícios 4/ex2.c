@@ -1,24 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int todos_os_primos(int max){
-	int qtd=0, i, j;
-	for (i=2;i<max;i++){
-		for (j=2;j<i;j++){
-			if (i%j==0){
-				qtd+=1;
-			}
-		}
-		if (qtd==0){
-			printf ("%d\n", i);
-		}
-		qtd=0;
+int eh_primo(int x){
+	int i, qtd=0;
+	for(i=1;i<=x;i++){
+		if(x%i==0){
+			qtd+=1;
+		}	
+	}
+	if (qtd==2){
+		return 1;
+	}
+	else{
+		return 0;
 	}
 }
-int main(void){
+
+void todos_os_primos(int max){
+	int x;
+	printf("NUMEROS PRIMOS\n");
+	for(x=2;x<max;x++){
+		int pr=eh_primo(x);
+		if(pr==1){
+			printf("%d\n", x);
+		}
+	}
+}
+
+int main(){
 	int max;
-	printf ("Digite um numero: ");
-	scanf ("%d", &max);
-	int x=todos_os_primos(max);
-	return 0;
+	printf("Digite um numero: ");
+	scanf("%d", &max);
+	todos_os_primos(max);
 }
