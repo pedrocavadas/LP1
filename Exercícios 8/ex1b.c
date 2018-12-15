@@ -12,8 +12,8 @@ int main(){
     char v[25];
     int i,len;
     printf("Digite uma frase: ");
-    scanf("%s", v);
-    FILE* f=fopen("/tmp/arq-01.txt","w");
+    fgets(v,25,stdin);
+    FILE* f=fopen("D:/Dev-Cpp/Programas feitos/arq.txt","w");
     char* str=v;
     escreva_string(f,str);
     fclose(f);
