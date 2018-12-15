@@ -46,7 +46,7 @@ void preenche(struct Escola* e){
 int main(){
 	struct Escola e;
 	preenche(&e);
-	FILE* f=fopen("/tmp/arq-01.txt","wb");
+	FILE* f=fopen("D:/Dev-Cpp/Programas feitos/arq.txt","wb");
 	if ((e.a.sub)==1){
 		fwrite(&e.a.id.nome, sizeof(char), strlen(e.a.id.nome)+1,f);
 	}
@@ -60,7 +60,7 @@ int main(){
 	fclose(f);
 	struct Escola b;
 	printf("Dados do aluno: \n");
-	FILE* p=fopen("/tmp/arq-01.txt","rb");
+	FILE* p=fopen("D:/Dev-Cpp/Programas feitos/arq.txt","rb");
 	if (e.a.sub==1){
 		fread(&b.a.id.nome, sizeof(char), strlen(e.a.id.nome)+1, p);
 	}
