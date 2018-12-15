@@ -12,10 +12,10 @@ void escreve_string(FILE* f, char* str){
 int main(){
     int i;
     char str[10][25];
-    FILE* f=fopen("/tmp/arq-02.txt", "w");
+    FILE* f=fopen("D:/Dev-Cpp/Programas feitos/arq.txt", "w");
     for (i=0;i<10;i++){
     	printf("Digite uma frase: ");
-        scanf("%s", str[i]);
+        fgets(str[i],25,stdin);
     }
     for (i=0;i<10;i++){
         escreve_string(f,str[i]);
