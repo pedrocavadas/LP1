@@ -6,7 +6,7 @@ struct Caixa{
 	struct Caixa* prox;
 };
 
-void imprime(struct Caixa* caixa){
+void exibe(struct Caixa* caixa){
 	while (caixa!=NULL){
 		printf("%d->", caixa->valor);
 		caixa=caixa->prox;
@@ -36,6 +36,6 @@ int main(){
 	scanf("%d", &c5.valor);
 	c5.prox=NULL;
 
-	imprime(&c1);
+	exibe(&c1);
 }
 	
