@@ -11,6 +11,7 @@ void exibe(struct Caixa* caixa){
 		printf("%d->", caixa->valor);
 		caixa=caixa->prox;
 	}
+	printf ("\n");
 }
 
 int main(){
