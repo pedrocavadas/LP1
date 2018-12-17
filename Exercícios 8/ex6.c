@@ -18,10 +18,7 @@ int main(){
 		printf("Digite a idade e o nome da pessoa, respectivamente: ");
 		scanf("%d", &(vet[i]).idade);
 		scanf("%s", (vet[i]).nome);
-		fwrite(&vet[i].idade, sizeof(int), 1, f);
-		fwrite(vet[i].nome, sizeof(char), strlen((vet[i]).nome)+1, f);
+		fwrite(&vet[i], sizeof(struct Pessoa), 1, f);
 	}
 	fclose(f);
 }
-	
-
